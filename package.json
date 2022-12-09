@@ -5,22 +5,38 @@
   "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:server": "nodemon index.mjs",
-    "dev:js": "esbuild --bundle resources/js/app.js --outdir=public/js --minify --watch",
-    "dev:css": "npx tailwindcss -i resources/scss/app.css -o public/css/app.css -w"
+    "dev:serve": "nodemon index.mjs",
+    "dev:js": "node esbuild.js",
+    "dev:css": "postcss resources/scss/app.scss -o public/css/app.css -w"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "apexcharts": "^3.35.4",
+    "body-parser": "^1.20.0",
+    "esbuild-svelte": "^0.7.1",
     "express": "^4.18.1",
     "nunjucks": "^3.2.3",
-    "socket.io-client": "^4.5.1"
+    "pg": "^8.8.0",
+    "realm": "^10.21.1",
+    "socket.io": "^4.5.1",
+    "socket.io-client": "^4.5.1",
+    "surrealdb.js": "^0.5.0",
+    "svelte": "^3.49.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.8",
     "esbuild": "^0.15.3",
     "nodemon": "^2.0.19",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^14.1.0",
+    "postcss-nested": "^5.0.6",
+    "postcss-nesting": "^10.1.10",
     "tailwindcss": "^3.1.8"
+  },
+  "volta": {
+    "node": "19.2.0"
   }
 }

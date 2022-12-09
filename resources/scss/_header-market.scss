@@ -1,0 +1,24 @@
+.header-market {
+    @apply
+    my-2
+    text-sm
+    p-1
+    border-b-2
+    bg-white
+    flex;
+
+    .key-val {
+        @apply
+        mx-6;
+
+        .key {
+            @apply
+            text-sm
+        }
+
+        .val {
+            @apply
+            text-xl
+        }
+    }
+}

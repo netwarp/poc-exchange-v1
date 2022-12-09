@@ -1,0 +1,60 @@
+.book {
+    @apply
+        /*
+    flex
+        */
+    bg-white
+    mb-3
+    shadow-md
+    text-sm
+    w-full;
+
+    .orders {
+        @apply
+        flex-1;
+
+        .orders-header {
+            @apply
+            flex
+            justify-around
+            text-white
+            p-2
+            bg-sky-700;
+
+            &.reverse {
+                @apply
+                flex-row-reverse
+            }
+        }
+
+        .line {
+            @apply
+            flex
+            justify-around;
+
+            &.reverse {
+                @apply
+                flex-row-reverse
+            }
+
+            &:nth-child(odd) {
+                @apply
+                bg-gray-200
+            }
+        }
+
+        &.buy {
+            .line .price {
+                @apply
+                text-green-500
+            }
+        }
+
+        &.sell {
+            .line .price {
+                @apply
+                text-red-500
+            }
+        }
+    }
+}

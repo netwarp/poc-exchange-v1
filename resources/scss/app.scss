@@ -1,0 +1,126 @@
+@import './_header-market.scss';
+@import './_history.scss';
+@import './_switcher.scss';
+@import './_book.scss';
+@import './_depth.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply
+    bg-gray-300
+    text-gray-800
+}
+
+.container-fluid {
+    @apply
+    bg-gray-100
+    mx-auto
+    w-full
+}
+
+.row {
+    @apply
+    flex;
+
+    .col {
+        @apply
+        w-full
+        mx-2;
+
+        &.thin-col {
+            @apply
+            w-1/5
+        }
+    }
+
+
+}
+
+
+
+
+.chart-switcher {
+    @apply
+    flex
+    p-1
+    justify-end;
+
+    span {
+        @apply
+        mx-3
+        cursor-pointer;
+
+        &.active {
+            @apply
+            text-purple-800
+        }
+    }
+}
+
+
+.user {
+    @apply
+    bg-white
+    mt-2
+    shadow-md
+    p-1;
+
+    .menu {
+        @apply
+        flex
+        justify-around;
+
+        .item {
+            @apply
+            text-lg
+            cursor-pointer
+        }
+    }
+
+    .view {
+
+        &#view-market {
+            @apply
+            flex
+            justify-around;
+
+            .side {
+                .side-header {
+
+                }
+
+                .side-form {
+
+                    .form-line {
+                        @apply
+                        flex
+                        flex-col
+                        my-2
+                    }
+
+                    input {
+                        @apply
+                        border
+                        p-1
+                    }
+
+                    button {
+                        @apply
+                        bg-green-500
+                        text-white
+                        text-2xl
+                        rounded-md
+                        p-2
+                    }
+                }
+            }
+        }
+    }
+}
+
+#chart text {
+    fill: rgba(215, 215, 215, 0.62) !important;
+}

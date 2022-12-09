@@ -1,0 +1,73 @@
+.switcher {
+    @apply
+    w-48
+    bg-gray-300
+    border-slate-400
+    hover:border-slate-700
+    text-center
+    relative
+    border-2
+    select-none
+    rounded-md;
+
+    .switcher-current {
+        @apply
+        text-xl
+        cursor-pointer
+        px-3
+        py-2
+        flex
+        justify-around
+        items-center
+        ;
+
+        .arrow {
+            @apply
+            text-sm
+        }
+    }
+
+    .switcher-markets {
+        @apply
+        absolute
+        top-14
+        bg-gray-300
+        border-slate-400
+        border-2
+        w-full
+        z-10
+        rounded-md
+        p-1
+        hidden
+        ;
+
+
+        &.active {
+            @apply
+            block
+        }
+
+        .switcher-market {
+            @apply
+            flex
+            hover:bg-gray-400
+            my-1
+            cursor-pointer
+            justify-around;
+
+            .percent {
+
+                &.green {
+                    @apply
+                    text-green-700
+                }
+
+                &.red {
+                    @apply
+                    text-red-700
+                }
+            }
+
+        }
+    }
+}

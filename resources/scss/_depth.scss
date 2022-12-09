@@ -1,0 +1,44 @@
+.depth {
+    @apply
+    overflow-hidden
+
+    ;
+
+    .depth-container {
+        @apply
+        flex
+        items-end;
+
+        height: 270px;
+    }
+
+    .bar {
+        @apply
+        flex-1;
+
+        &.buy {
+            @apply
+            border-t-2
+            border-t-green-800
+            bg-green-500;
+
+            &:hover {
+                @apply
+                bg-green-400
+            }
+        }
+
+        &.sell {
+            @apply
+            border-t-2
+            border-t-red-800
+            bg-red-500;
+
+            &:hover {
+                @apply
+                bg-red-400
+            }
+        }
+    }
+
+}

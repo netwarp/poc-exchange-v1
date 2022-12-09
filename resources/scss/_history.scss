@@ -1,0 +1,58 @@
+.history {
+    @apply
+    bg-white
+    mb-3
+    text-sm
+    shadow-md
+    text-center;
+
+    .history-header {
+        @apply
+        p-2
+        bg-sky-700
+        text-white;
+    }
+
+    .history-body {
+
+    }
+}
+
+.history-order {
+    @apply
+    flex;
+
+    &:nth-child(odd) {
+        @apply
+        bg-gray-200
+    }
+
+    &.sell {
+        .history-order-side {
+            @apply
+            bg-red-500
+            text-white
+        }
+    }
+
+    &.buy {
+        .history-order-side {
+            @apply
+            bg-green-500
+            text-white
+        }
+    }
+}
+
+.history-order > div, .history-info > div {
+    @apply
+    px-3
+    flex-1
+}
+
+.history-info {
+    @apply
+    flex
+    bg-sky-900
+    text-white
+}

@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-      'resources/scss/**/*.css'
+      'resources/scss/**/*.scss',
+      'resources/js/**/*.svelte'
   ],
   presets: [],
   darkMode: 'media', // or 'class'

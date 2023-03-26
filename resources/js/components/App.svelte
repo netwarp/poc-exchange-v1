@@ -34,7 +34,7 @@
         <div class="col thin-colzz">
             <Book {market}/>
         </div>
-            <!--
+
         <div class="col">
             <div class="chart-switcher">
                 <span class="{chart === 'Standard' ? 'active': ''}" on:click={ () => switchChart('Standard') }>Standard</span>
@@ -42,12 +42,10 @@
             </div>
             <Chart />
             <Depth />
-             -->
 
-            <!--
             <User />
         </div>
-             -->
+
         <div class="col thin-col33" style="width: 30%;">
             <History {market}/>
         </div>
